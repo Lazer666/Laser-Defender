@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //configuration parameters
     [SerializeField]float move_speed = 10f;
-    [SerializeField]float xmin,xmax,ymin,ymax;
     [SerializeField]float pad = 0.5f;
+    [SerializeField]GameObject laser_pre;
+    [SerializeField]float bullet_speed = 10f;
+
+    float xmin,xmax,ymin,ymax;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        Shoot();
     }
     private void Move()
     {
@@ -32,5 +37,13 @@ public class Player : MonoBehaviour
         var new_Xpos = Mathf.Clamp((transform.position.x + deltaX), xmin+pad, xmax-pad);
         var new_Ypos = Mathf.Clamp((transform.position.y + deltaY), ymin+pad, ymax-pad);
         transform.position = new Vector2(new_Xpos,new_Ypos);
+    }
+    private void Shoot()
+    {
+        if(Input.GetButtonDown("Fire1"))
+        {
+            GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,bullet_speed);
+        }
     }
 }
