@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField]float pad = 0.5f;
     [SerializeField]GameObject laser_pre;
     [SerializeField]float bullet_speed = 10f,bullet_period = 0.1f;
+    bool shooting = false;
     Coroutine coshoot;
 
     float xmin,xmax,ymin,ymax;
@@ -41,22 +42,17 @@ public class Player : MonoBehaviour
     }
     private void Shoot()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1") && !shooting)
         {
             coshoot = StartCoroutine(CoShoot());
-        }
-        if(Input.GetButtonUp("Fire1"))
-        {
-            StopCoroutine(coshoot);
         }
     }
     IEnumerator CoShoot()
     {
-        while(true)
-        {
+        shooting = true;
             GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,bullet_speed);
             yield return new WaitForSeconds(bullet_period);
-        }
+        shooting = false;
     }
 }
