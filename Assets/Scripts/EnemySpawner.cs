@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]List<WaveConfig> wave_configs;
-    int start_wave = 0;
+    [SerializeField]int start_wave = 0;
     // Start is called before the first frame update
     void Start()
     {
-        var cur_wave = wave_configs[start_wave];
-        StartCoroutine(Spawn_Enemies_Wave(cur_wave));
+        StartCoroutine(Spawn_Waves());
     }
     private IEnumerator Spawn_Enemies_Wave(WaveConfig wave_config)
     {
@@ -21,6 +20,14 @@ public class EnemySpawner : MonoBehaviour
                                         Quaternion.identity);
             new_enemy.GetComponent<EnemyPathing>().Set_WaveConfig(wave_config);
             yield return new WaitForSeconds(wave_config.Get_Timespawns());
+        }
+    }
+    private IEnumerator Spawn_Waves()
+    {
+        for(int wave_index = start_wave; wave_index < wave_configs.Count; wave_index++)
+        {
+            var cur_wave = wave_configs[wave_index];
+            yield return StartCoroutine(Spawn_Enemies_Wave(cur_wave));
         }
     }
 }

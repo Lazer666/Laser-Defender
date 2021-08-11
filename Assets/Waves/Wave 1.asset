@@ -16,5 +16,5 @@ MonoBehaviour:
   path_pre: {fileID: 8907206579418479263, guid: 8209b35f8b3cf254abd3d4ba7401ea5c, type: 3}
   time_spawns: 0.5
   spawn_random: 0.3
-  num_enemy: 5
-  move_speed: 2
+  num_enemy: 3
+  move_speed: 5

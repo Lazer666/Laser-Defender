@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce5a96c59dc50c347a43226627bff209, type: 3}
-  m_Name: Wave 2
+  m_Name: Wave 4
   m_EditorClassIdentifier: 
   enemy_pre: {fileID: 7362427692264918618, guid: 217e5cf31d29ee743823fd937a5d8090, type: 3}
-  path_pre: {fileID: 8907206579418479263, guid: 8209b35f8b3cf254abd3d4ba7401ea5c, type: 3}
+  path_pre: {fileID: 418933495046367372, guid: 604544e11b0b6954f8d0056b3f818ebe, type: 3}
   time_spawns: 0.5
   spawn_random: 0.3
   num_enemy: 5
-  move_speed: 2
+  move_speed: 3
