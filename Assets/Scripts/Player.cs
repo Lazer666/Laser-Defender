@@ -5,8 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //configuration parameters
+    [Header("Player Movement")]
     [SerializeField]float move_speed = 10f;
     [SerializeField]float pad = 0.5f;
+    [SerializeField]int health = 200;
+
+    [Header("Bullet")]
     [SerializeField]GameObject laser_pre;
     [SerializeField]float bullet_speed = 10f,bullet_period = 0.1f;
     bool shooting = false;
@@ -54,7 +58,20 @@ public class Player : MonoBehaviour
         GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,bullet_speed);
         yield return new WaitForSeconds(bullet_period);
-        
+
         shooting = false;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damage_dealer = other.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(damage_dealer);
+    }
+    private void ProcessHit(DamageDealer damage_dealer)
+    {
+        health -= damage_dealer.Get_Damage();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
