@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4890484657996156835}
   - component: {fileID: 3545030524728386520}
   - component: {fileID: -7845716655226960641}
+  - component: {fileID: 3300037930400899022}
+  - component: {fileID: 3542388632950322929}
   m_Layer: 0
   m_Name: Enemy 2
   m_TagString: Untagged
@@ -95,3 +97,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79097d47cb400be4784da2e1e614004a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3300037930400899022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362427692264918618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7247fcc6f3d9f2a4e8acaf70f91fd3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!70 &3542388632950322929
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362427692264918618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.659295e-13, y: 0.0000030696397}
+  m_Size: {x: 1.0300003, y: 0.8540763}
+  m_Direction: 1
