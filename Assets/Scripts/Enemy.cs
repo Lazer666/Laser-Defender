@@ -31,21 +31,22 @@ public class Enemy : MonoBehaviour
     }
     private void Shoot()
     {
-        // shooting = true;
-
         GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-bullet_speed);
-
-        // shooting = false;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damage_dealer = other.gameObject.GetComponent<DamageDealer>();
+        if(!damage_dealer)
+        {
+            return ;
+        }
         ProcessHit(damage_dealer);
     }
     private void ProcessHit(DamageDealer damage_dealer)
     {
         health -= damage_dealer.Get_Damage();
+        damage_dealer.Hit();
         if (health <= 0)
         {
             Destroy(gameObject);
