@@ -50,9 +50,11 @@ public class Player : MonoBehaviour
     IEnumerator CoShoot()
     {
         shooting = true;
-            GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,bullet_speed);
-            yield return new WaitForSeconds(bullet_period);
+
+        GameObject laser = Instantiate(laser_pre, transform.position, Quaternion.identity) as GameObject;
+        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,bullet_speed);
+        yield return new WaitForSeconds(bullet_period);
+        
         shooting = false;
     }
 }
