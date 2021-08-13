@@ -115,6 +115,8 @@ MonoBehaviour:
   max_shoot: 3
   laser_pre: {fileID: 7439740218390825598, guid: 305ec24b856e27742b3fd7e8673fb969, type: 3}
   bullet_speed: 7
+  boom_pre: {fileID: 7362427692264918618}
+  boom_time: 1
 --- !u!70 &3542388632950322929
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

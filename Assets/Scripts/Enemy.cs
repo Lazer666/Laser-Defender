@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]float shot_count,min_shoot = .2f,max_shoot = 3f;
     [SerializeField]GameObject laser_pre;
     [SerializeField]float bullet_speed = 7f;
+    [SerializeField]GameObject boom_pre;
+    [SerializeField]float boom_time = 1f;
     // bool shooting = false;
     // Start is called before the first frame update
     void Start()
@@ -49,7 +51,14 @@ public class Enemy : MonoBehaviour
         damage_dealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject boom = Instantiate(boom_pre, transform.position, transform.rotation);
+        Destroy(boom, boom_time);
     }
 }
