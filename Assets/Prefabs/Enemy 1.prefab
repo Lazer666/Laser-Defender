@@ -117,6 +117,10 @@ MonoBehaviour:
   bullet_speed: 7
   boom_pre: {fileID: 2676965129257779271, guid: 8e54fe8ecb64d7347b9eb505f2aa98a6, type: 3}
   boom_time: 1
+  shoot_sound: {fileID: 8300000, guid: 3d59de849ba21764b9d86abd17407722, type: 3}
+  die_sound: {fileID: 8300000, guid: fc8b4d8f168dc1c41860a2bcf643eb31, type: 3}
+  shoot_sound_volume: 0.2
+  die_sound_volume: 0.5
 --- !u!70 &5508787284769759723
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
