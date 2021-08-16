@@ -111,10 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7247fcc6f3d9f2a4e8acaf70f91fd3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 200
   shot_count: 0
   min_shoot: 0.2
   max_shoot: 3
+  score_value: 10
   laser_pre: {fileID: 7808503780171309189, guid: 4cb122d145cf1844a8bcfdbaa224baf8, type: 3}
   bullet_speed: 7
   boom_pre: {fileID: 2676965129257779271, guid: 8e54fe8ecb64d7347b9eb505f2aa98a6, type: 3}

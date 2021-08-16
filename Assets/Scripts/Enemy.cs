@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [Header("Enemy Stats")]
     [SerializeField]float health = 100;
-    [SerializeField]float shot_count,min_shoot = .2f, max_shoot = 3f;
+    float shot_count;
+    [SerializeField]float min_shoot = .2f, max_shoot = 3f;
     [SerializeField]int score_value = 10;
 
     [Header("Enemy Stats of Bullet")]

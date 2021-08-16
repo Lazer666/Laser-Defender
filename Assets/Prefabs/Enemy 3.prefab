@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3542388632950322929}
   - component: {fileID: -5340011065723567346}
   m_Layer: 7
-  m_Name: Enemy 2
+  m_Name: Enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a63a0242fe135b439998de31902478f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8daab167c3140604e87a8097204695f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,16 +111,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7247fcc6f3d9f2a4e8acaf70f91fd3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  shot_count: 0
+  health: 1000
   min_shoot: 0.2
   max_shoot: 3
-  score_value: 10
-  laser_pre: {fileID: 7439740218390825598, guid: 305ec24b856e27742b3fd7e8673fb969, type: 3}
-  bullet_speed: 7
+  score_value: 30
+  laser_pre: {fileID: 7439740218390825598, guid: 6ec32ad97b2c0214eb376fc6897bfe61, type: 3}
+  bullet_speed: 9
   boom_pre: {fileID: 2676965129257779271, guid: 8e54fe8ecb64d7347b9eb505f2aa98a6, type: 3}
   boom_time: 1
-  shoot_sound: {fileID: 8300000, guid: 1f985b27bdb24704b989fa0c2890ae85, type: 3}
+  shoot_sound: {fileID: 8300000, guid: c6624370657f59c44afa55c5a7aa0aef, type: 3}
   die_sound: {fileID: 8300000, guid: fc8b4d8f168dc1c41860a2bcf643eb31, type: 3}
   shoot_sound_volume: 0.2
   die_sound_volume: 0.5
