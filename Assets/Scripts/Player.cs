@@ -88,4 +88,8 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(die_sound, Camera.main.transform.position, die_sound_volume);
     }
+    public int Get_Health()
+    {
+        return health;
+    }
 }
