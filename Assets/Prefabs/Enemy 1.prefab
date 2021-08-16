@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
-  shot_count: 0
   min_shoot: 0.2
   max_shoot: 3
   score_value: 10
@@ -122,8 +121,8 @@ MonoBehaviour:
   boom_time: 1
   shoot_sound: {fileID: 8300000, guid: 3d59de849ba21764b9d86abd17407722, type: 3}
   die_sound: {fileID: 8300000, guid: fc8b4d8f168dc1c41860a2bcf643eb31, type: 3}
-  shoot_sound_volume: 0.2
-  die_sound_volume: 0.5
+  shoot_sound_volume: 0.3
+  die_sound_volume: 0.3
 --- !u!114 &8627045380480770416
 MonoBehaviour:
   m_ObjectHideFlags: 0

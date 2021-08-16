@@ -121,8 +121,8 @@ MonoBehaviour:
   boom_time: 1
   shoot_sound: {fileID: 8300000, guid: c6624370657f59c44afa55c5a7aa0aef, type: 3}
   die_sound: {fileID: 8300000, guid: fc8b4d8f168dc1c41860a2bcf643eb31, type: 3}
-  shoot_sound_volume: 0.2
-  die_sound_volume: 0.5
+  shoot_sound_volume: 0.3
+  die_sound_volume: 0.3
 --- !u!114 &3239521554682924358
 MonoBehaviour:
   m_ObjectHideFlags: 0
